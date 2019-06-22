@@ -5,9 +5,10 @@ const   express =       require('express'),
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
-app.set('veiw engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+    console.log(req.query.options);
     res.render('index');
 });
 
