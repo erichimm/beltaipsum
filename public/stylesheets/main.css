@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    /* background-image: url('../assets/jeremy-perkins-stary-sky.jpg'); */
+    /* background-size: cover; */
+    background-color: #ebebeb;
+    font-family: DinLight;
+}
+
+.container {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    background: black url('../assets/beltaipsum_banner.jpg');
+    background-size: 100% 100%;
+    margin: 0 -15px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 770px) {
+    header {
+      background-image: url('../assets/beltaipsum_banner_small.jpg');
+    }
+  }
+
+header h1 {
+    font-family: DinMedium;
+    font-size: 64px;
+    color: white;
+    padding-left: 15px;
+}
+
+textarea {
+    height: 50%;
+    width: 100%;
+    resize: none;
+}
+
+@font-face {
+    font-family: DinLight;
+    src: url("../assets/ufonts.com_dinpro-light-opentype.otf") format("opentype");
+}
+
+@font-face {
+    font-family: DinMedium;
+    src: url("../assets/ufonts.com_dinpro-medium-opentype.otf") format("opentype");
+}
