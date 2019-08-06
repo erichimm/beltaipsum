@@ -9,21 +9,22 @@ function generate(options) {
     var words = getWords(options.genType);
 
     var numParagraphs = options.paragraphs;
-    var text = '';
+    var text = [];
     for(var i=0; i<numParagraphs; i++){
         // let paragraph length be between [5, 15) sentances long
         let paragraphLength = Math.floor(Math.random() * 10) + 5;
-        text += makeParagraph(words, paragraphLength);
-        if(i != numParagraphs-1) {
-            text += '\n';
-        }
+        text.push(makeParagraph(words, paragraphLength));
     }
 
     if(options['start-with-belta'] === 'on') {
-        text = 'Belta ipsum dolor amet ' + text.charAt(0).toLowerCase() + text.slice(1);
+        let first = text[0];
+        first = 'Belta ipsum dolor amet ' + first.charAt(0).toLowerCase() + first.slice(1);
+        text[0] = first;
     }
     if(options['end-with-sasa'] === 'on') {
-        text = text.slice(0, text.length-3) + ', sasa ke?';
+        let last = text[text.length-1];
+        last = last.slice(0, last.length-3) + ', sasa ke?';
+        text[text.length-1] = last;
     }
 
     return text;
@@ -80,9 +81,7 @@ function makeParagraph(words, numSentences) {
         let sentenceLength = Math.floor(Math.random() * 20) + 5;
         paragraph += makeSentence(words, sentenceLength);
 
-        if(i === numSentences-1) {
-            paragraph += '\n';
-        } else {
+        if(i !== numSentences-1) {
             paragraph += ' ';
         }
     }
