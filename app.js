@@ -9,13 +9,12 @@ app = express()
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    // console.log(req.query.options);
-    res.render('index', {ipsum: generator.generate(req.query.options)});
+    res.render('index');
 });
 
 app.get('/api/belta', (req, res) => {
-    console.log(req.query.options);
-    let generatedText = generator.generate(req.query.options);
+    // console.log(req.query);
+    let generatedText = generator(req.query);
     res.json(generatedText);
 })
 

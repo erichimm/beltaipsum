@@ -1,7 +1,7 @@
-var fs = require('fs');
-var os = require('os');
+const fs = require('fs');
+const os = require('os');
 
-function generate(options) {
+function generator(options) {
     if(!options) {
         return null;
     }
@@ -89,4 +89,4 @@ function makeParagraph(words, numSentences) {
     return paragraph;
 }
 
-module.exports = { generate };
+module.exports = generator;

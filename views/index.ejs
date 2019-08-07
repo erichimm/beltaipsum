@@ -8,11 +8,11 @@
   <div class="row justify-content-between p-2">
       <h4 class="col-12 col-lg-4 col-xl-6">Want your lorem ipsum text to be out of this world? Head on out to the asteroid belt, and give our generator a try!</h4>
 
-      <form action="/" method="get" class="col-12 col-lg-7 col-xl-6">
+      <form class="col-12 col-lg-7 col-xl-6">
           <div class="form-group row">
               <label for="inputAmount" class="col-sm-2 col-form-label">Paragraphs</label>
               <div class="col-sm-10">
-                  <input type="number" name="options[paragraphs]" id="inputAmount" class="form-control" value="5" min="0" max="100" required>
+                  <input type="number" name="paragraphs" id="inputAmount" class="form-control" value="5" min="0" max="100" required>
               </div>
           </div>
           <fieldset class="form-group">
@@ -20,13 +20,13 @@
                 <legend class="col-form-label col-sm-2 pt-0">Type</legend>
                 <div class="col-sm-10">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="options[genType]" id="genType1" value="belta" checked>
+                    <input class="form-check-input" type="radio" name="genType" id="genType1" value="belta" checked>
                     <label class="form-check-label" for="genType1">
                       All Belta
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="options[genType]" id="genType2" value="belta-with-filler">
+                    <input class="form-check-input" type="radio" name="genType" id="genType2" value="belta-with-filler">
                     <label class="form-check-label" for="genType2">
                       Belta and Filler
                     </label>
@@ -38,13 +38,13 @@
               <div class="col-sm-2">Options</div>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="options[start-with-belta]" id="check1" checked>
+                  <input class="form-check-input" type="checkbox" name="start-with-belta" id="check1" checked>
                   <label class="form-check-label" for="check1">
                       Start with Belta
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="options[end-with-sasa]" id="check2">
+                  <input class="form-check-input" type="checkbox" name="end-with-sasa" id="check2">
                   <label class="form-check-label" for="check2">
                       End with sasa ke
                   </label>
@@ -59,6 +59,12 @@
       </form>
   </div>
   
-  <textarea spellcheck="false" class=""><%= ipsum %></textarea>
+  <button id="copyBtn" class="btn btn-info float-right">
+    <i class="fas fa-clipboard"></i>
+    <span class="tooltiptext">Copy to Clipboard</span>
+    Copy
+  </button>
+  <textarea spellcheck="false" class="textDisplay"></textarea>
 
+  <script src="scripts/main.js"></script>
 <% include partials/footer %>
