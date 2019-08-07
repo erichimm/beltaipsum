@@ -33,6 +33,50 @@ header h1 {
     padding-left: 15px;
 }
 
+#copyBtn {
+    position: relative;
+    margin-right: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+#copyBtn .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#copyBtn .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+#copyBtn:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#copyBtn i {
+    padding-right: 5px;
+}
+
 textarea {
     height: 50%;
     width: 100%;
