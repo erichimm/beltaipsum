@@ -38,7 +38,7 @@ header h1 {
     margin-right: 20px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
+}
 
 #copyBtn .tooltiptext {
     visibility: hidden;
@@ -78,8 +78,9 @@ header h1 {
 }
 
 textarea {
-    height: 50%;
+    height: 40%;
     width: 100%;
+    padding: 15px;
     resize: none;
 }
 
