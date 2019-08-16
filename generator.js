@@ -23,7 +23,7 @@ function generator(options) {
     }
     if(options['end-with-sasa'] === 'on') {
         let last = text[text.length-1];
-        last = last.slice(0, last.length-3) + ', sasa ke?';
+        last = last.slice(0, last.length-1) + ', sasa ke?';
         text[text.length-1] = last;
     }
 
