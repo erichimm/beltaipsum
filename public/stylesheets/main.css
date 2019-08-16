@@ -1,48 +1,141 @@
-body {
-    height: 100vh;
-    /* background-image: url('../assets/jeremy-perkins-stary-sky.jpg'); */
-    /* background-size: cover; */
-    background-color: #ebebeb;
-    font-family: DinLight;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700'); 
 
-.container {
+html {
     height: 100%;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ecf0f1;
+    /* min-height: 100%; */
+}
+
+/* Header content */
+
 header {
+	text-align: center;
+}
+header h1 {
+	font-size: 64px;
+	font-weight: 300;
+    padding: 80px 0 25px;
+    margin: 0;
+	color: #2c3e50;
+}
+header h1 span {
+	font-weight: 700;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    color: #57595a;
+    height: 100%;
+}
+
+h2 {
+    font-size: 24px;
+	font-weight:400;
+}
+
+p span {
+    font-weight: 500;
+}
+
+/* Form content */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.formRow {
+    display: flex;
+    width: 310px;
+    padding: 10px 0;
+}
+
+.formCol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.inputRow {
     display: flex;
     align-items: center;
-    height: 200px;
-    background: black url('../assets/beltaipsum_banner.jpg');
-    background-size: 100% 100%;
-    margin: 0 -15px;
-    padding: 10px;
+    padding-bottom: 5px;
 }
 
-@media screen and (max-width: 770px) {
-    header {
-      background-image: url('../assets/beltaipsum_banner_small.jpg');
-    }
-  }
+#paragraphs {
+    width: 100%;
+    /* padding: 1px 0;
+    line-height: 24px;
+    font-size: 16px; */
+}
 
-header h1 {
-    font-family: DinMedium;
-    font-size: 64px;
+.label {
+    width: 180px;
+    margin-right: 40px;
+    text-align: left;
+}
+
+label {
+    margin: 0 0 0 10px;
+}
+
+.formBtns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Text area content */
+textarea {
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+button {
+    height: 40px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+    background-color: #4a6886;
     color: white;
-    padding-left: 15px;
+    font-size: 16px;
 }
+
+button:focus {
+    outline: none;
+    box-shadow: 0px -2px 4px 1px #666666;
+}
+
+button:active {
+    background: rgb(44,62,80);
+    background: linear-gradient(180deg, #3e5974 0%, #263647 33%, #263647 66%, #3e5974 100%);
+}
+
+button:hover {
+    background-color: #3e5974;
+}
+
+/* Copy Button Tooltip */
 
 #copyBtn {
     position: relative;
-    margin-right: 20px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    /* margin-right: 20px; */
 }
 
 #copyBtn .tooltiptext {
     visibility: hidden;
-    width: 140px;
+    width: 160px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -75,21 +168,4 @@ header h1 {
 
 #copyBtn i {
     padding-right: 5px;
-}
-
-textarea {
-    height: 40%;
-    width: 100%;
-    padding: 15px;
-    resize: none;
-}
-
-@font-face {
-    font-family: DinLight;
-    src: url("../assets/ufonts.com_dinpro-light-opentype.otf") format("opentype");
-}
-
-@font-face {
-    font-family: DinMedium;
-    src: url("../assets/ufonts.com_dinpro-medium-opentype.otf") format("opentype");
 }

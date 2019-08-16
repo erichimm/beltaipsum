@@ -1,70 +1,67 @@
 <% include partials/header %>
 
-<div class="container bg-white">
-  <header>
-    <!-- <h1>Belta Ipsum</h1> -->
-  </header>
+<header>
+  <h1>Belta <span>Ipsum</span></h1>
+</header>
 
-  <div class="row justify-content-between p-2">
-      <h4 class="col-12 col-lg-4 col-xl-6">Want your lorem ipsum text to be out of this world? Head on out to the asteroid belt, and give our generator a try!</h4>
+<div class="container">
+  <h2>
+    Want your lorem ipsum to be out of this world?
+  </h2>
+  <p>
+    Drawing from the Belter creole on the hit sci-fi series <span>The Expanse</span>,<br>this generator creates
+    randomized blocks of text using your favorite langbelta words.
+  </p>
+</div>
 
-      <form class="col-12 col-lg-7 col-xl-6">
-          <div class="form-group row">
-              <label for="inputAmount" class="col-sm-2 col-form-label">Paragraphs</label>
-              <div class="col-sm-10">
-                  <input type="number" name="paragraphs" id="inputAmount" class="form-control" value="5" min="0" max="100" required>
-              </div>
+<div class="container">
+  <form>
+    <div class="formRow">
+      <div class="label">Paragraphs</div>
+      <div class="formCol">
+        <div class="inputRow">
+          <input type="number" name="paragraphs" id="paragraphs" value="5" min="0" max="100" required>
+        </div>
+      </div>
+    </div>
+    <div class="formRow">
+      <div class="label">Dictionary</div>
+      <div class="formCol">
+          <div class="inputRow">
+            <input type="radio" name="genType" id="genType1" value="belta" checked>
+            <label for="genType1">Pure Belta</label>
           </div>
-          <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Type</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="genType" id="genType1" value="belta" checked>
-                    <label class="form-check-label" for="genType1">
-                      All Belta
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="genType" id="genType2" value="belta-with-filler">
-                    <label class="form-check-label" for="genType2">
-                      Belta and Filler
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="form-group row">
-              <div class="col-sm-2">Options</div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="start-with-belta" id="check1" checked>
-                  <label class="form-check-label" for="check1">
-                      Start with Belta
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="end-with-sasa" id="check2">
-                  <label class="form-check-label" for="check2">
-                      End with sasa ke
-                  </label>
-                </div>
-              </div>
-            </div>
-          <div class="form-group row">
-              <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
+          <div class="inputRow">
+            <input type="radio" name="genType" id="genType2" value="belta-with-filler">
+            <label for="genType2">Belta + Latin</label>
           </div>
-      </form>
-  </div>
-  
-  <button id="copyBtn" class="btn btn-info float-right">
-    <i class="fas fa-clipboard"></i>
-    <span class="tooltiptext">Copy to Clipboard</span>
-    Copy
-  </button>
+      </div>
+    </div>
+
+    <div class="formRow">
+      <div class="label">Options</div>
+      <div class="formCol">
+          <div class="inputRow">
+            <input type="checkbox" name="start-with-belta" id="check1" checked>
+            <label for="check1">Start with Belta</label>
+          </div>
+          <div class="inputRow">
+            <input type="checkbox" name="end-with-sasa" id="check2">
+            <label for="check2">End with sasa ke</label>
+          </div>
+      </div>
+    </div>
+
+    <div class='formBtns'>
+      <button type="submit">Generate</button>
+      <button type="button" id="copyBtn">
+        <i class="fas fa-clipboard"></i><span class="tooltiptext">Copy to Clipboard</span>Copy
+      </button>
+    </div>
+  </form>
+
   <textarea spellcheck="false" class="textDisplay"></textarea>
+</div>
 
-  <script src="scripts/main.js"></script>
+<script src="scripts/main.js"></script>
 <% include partials/footer %>
