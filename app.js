@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/api/belta', (req, res) => {
+app.get('/api', (req, res) => {
     // console.log(req.query);
     let generatedText = generator(req.query);
     res.json(generatedText);

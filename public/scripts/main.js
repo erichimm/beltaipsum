@@ -2,7 +2,7 @@ $(function() {
     $('form').submit(async function(event) {
         event.preventDefault();
         let options = $(this).serialize();        
-        let generatedText = await $.getJSON('/api/belta',options);
+        let generatedText = await $.getJSON('/api',options);
 
         let text = '';
         generatedText.forEach((paragraph, i) => {
