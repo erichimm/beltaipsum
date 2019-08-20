@@ -115,7 +115,7 @@ button {
 
 button:focus {
     outline: none;
-    box-shadow: 0px -2px 4px 1px #666666;
+    box-shadow: 0px -2px 2px 1px #666666;
 }
 
 button:active {
